@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f2025;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.booking {
+  width: 90%;
+  height: 90%;
+  /* border: 1px solid white; */
+  margin: 0 auto;
+  display: flex;
+}
+.left {
+  width: 20%;
+  background: #2e3037;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* border: 1px solid white; */
+}
+.left img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+.left #button {
+  background: #fd6565;
+  display: flex;
+  border-radius: 18px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: white;
+  left: 40%;
+  top: -25px;
+  box-shadow: 0 0 5px 0 white;
+}
+
+.left #button:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+  transition: 0.3s;
+}
+.left .in4 {
+  color: white;
+  text-transform: capitalize;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+.left .in4 p {
+  margin-bottom: 7px;
+  font-size: 12px;
+  flex-shrink: 1;
+}
+.left .in4 h6 {
+  flex-shrink: 1;
+  font-size: 14px;
+}
+.right {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  /* border: 1px solid white; */
+}
+.container {
+  margin: 0 auto;
+  width: 95%;
+  height: 100vh;
+}
+.thumbnail {
+  margin: 0 auto;
+  /* border: 1px solid white; */
+  height: 200px;
+  width: 100%;
+  /* background: url("/btlon/img/the-guest-thumb.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -25px;
+  border-radius: 10px;
+}
+.thumbnail::after {
+  position: absolute;
+  content: " ";
+  height: 36%;
+  /* width: 95%; */
+  background: linear-gradient(
+    to right,
+    #1f2025 0%,
+    transparent 30%,
+    transparent 70%,
+    #1f2025 100%
+  );
+}
+.screen {
+  padding: 20px;
+  border-top: 1px solid #fd6565;
+  border-radius: 20%;
+  /* box-shadow: inset 0px 10px 20px 0px var(--color); */
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: center;
+  /* width: 90%; */
+  letter-spacing: 5px;
+  text-transform: capitalize;
+  /* color: #1f2025; */
+}
+/* .booking .right .screen::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0px 10px 20px rgb(184, 184, 184, 0.5);
+  top: -20px;
+  left: 0px;
+} */
+.row {
+  margin-top: 20px;
+}
+
+.row .chair,
+.number {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.row .chair li {
+  display: flex;
+  position: relative;
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  border-radius: 5px;
+  background: rgb(184, 184, 184, 0.3);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  margin: 5px 10px;
+}
+
+.chair li.selected {
+  background-color: yellowgreen;
+  color: white;
+}
+
+.row .chair li.c,
+.row .chair li.e,
+.row .chair li.d {
+  background: black;
+}
+.row .chair li.c.selected,
+.row .chair li.d.selected,
+.row .chair li.e.selected {
+  background-color: yellowgreen; /* Màu cho ghế đã chọn */
+}
+
+.row .chair li:nth-child(4) {
+  margin-right: 30px;
+}
+.row .chair li:nth-last-child(4) {
+  margin-left: 30px;
+}
+.row .chair li:hover {
+  background: #fd6565;
+}
+.row .number li {
+  margin: 0 10px;
+  text-align: center;
+  list-style-type: none;
+  color: white;
+  width: 40px;
+  height: 30px;
+}
+.row .number li:nth-child(3) {
+  margin-right: 30px;
+}
+.row .number li:nth-last-child(3) {
+  margin-left: 30px;
+}
+.typeseat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+.typeseat ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.typeseat li {
+  position: relative;
+  margin: 0px 30px;
+  font-size: 14px;
+}
+
+.typeseat .tp li::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 15px;
+  background: rgb(184, 184, 184, 0.3);
+  border-radius: 5px;
+  left: -30px;
+  bottom: 3px;
+}
+.typeseat .tp li:nth-child(3)::before {
+  background: black;
+}
+.typeseat .tp li:nth-child(2)::before {
+  background: greenyellow;
+}
+.right #next {
+  display: flex;
+  background: #fd6565;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  right: 0px;
+  bottom: 0px;
+}
+.left #back {
+  display: flex;
+  background: #fd6565;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  left: 0px;
+  bottom: 0px;
+}
+.right video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -8;
+  object-fit: cover;
+  display: none;
+}
