@@ -15,23 +15,11 @@ function click() {
 }
 btn.addEventListener("click", click);
 
-// Lấy tất cả các ghế (các thẻ <li> trong danh sách ghế)
-const chairs = document.querySelectorAll(".chair li");
+const seats = document.querySelectorAll(".rowseat li");
 
-// Lặp qua tất cả ghế và thêm sự kiện 'click'
-chairs.forEach(function (chair) {
-  chair.addEventListener("click", function () {
-    // Kiểm tra nếu ghế đã có class 'selected' thì bỏ đi, nếu chưa có thì thêm vào
-    chair.classList.toggle("selected");
+seats.forEach(function (seat) {
+  seat.addEventListener("click", function (e) {
+    e.stopPropagation(); // Ngăn event bubbling
+    this.classList.toggle("selected");
   });
-});
-
-// ấn vào nút có chứa id "next" thì chuyển sang trang tiếp theo
-
-document.getElementById("next").addEventListener("click", function () {
-  window.location.href = "page2.html"; // Chuyển đến trang page2.html
-});
-// ấn vào nút có chứa id "back" thì chuyển sang trang trước
-document.getElementById("back").addEventListener("click", function () {
-  window.location.href = "page2.html"; // Chuyển đến trang page2.html
 });
