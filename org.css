@@ -35,7 +35,7 @@ body {
   object-fit: cover;
 }
 .left #button {
-  background: url(/btlon/img/pk2.jpeg);
+  background: url('img/pk2.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -7px;
